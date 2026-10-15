@@ -9,7 +9,7 @@ A GitHub Action that calculates the next [semantic version](https://semver.org) 
   with:
     fetch-depth: 0  # required: full history + tags
 
-- uses: serajhqi/conventioanl-semver@v1
+- uses: serajhqi/conventional-semver@v1
   id: semver
 
 - run: echo "Next version is ${{ steps.semver.outputs.version_tag }}"
@@ -156,7 +156,7 @@ jobs:
         with:
           fetch-depth: 0
 
-      - uses: serajhqi/conventioanl-semver@v1
+      - uses: serajhqi/conventional-semver@v1
         id: semver
         with:
           prerelease: rc
@@ -185,7 +185,7 @@ This approach ensures each commit on a release branch gets a unique identifier w
 ### Alpha/Beta workflow
 
 ```yaml
-- uses: serajhqi/conventioanl-semver@v1
+- uses: serajhqi/conventional-semver@v1
   id: semver
   with:
     prerelease: alpha
@@ -223,7 +223,7 @@ jobs:
         with:
           fetch-depth: 0
 
-      - uses: serajhqi/conventioanl-semver@v1
+      - uses: serajhqi/conventional-semver@v1
         id: semver
 
       - name: Create tag
@@ -253,7 +253,7 @@ jobs:
         with:
           fetch-depth: 0
 
-      - uses: serajhqi/conventioanl-semver@v1
+      - uses: serajhqi/conventional-semver@v1
         id: semver
 
       - name: Tag commit
